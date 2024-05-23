@@ -1,0 +1,59 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+
+    background-color: #77d01d;
+    color: #ffff;
+}
+
+.logo{
+    font-size: 4vw;
+}
+
+nav ul{
+    list-style: none;  
+}
+
+nav li{
+    display: inline;
+    margin-right:  15px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #192c07;
+    font-size: 2vw;
+}
+
+
+/*Media query para pantallas medianas*/
+@media (min-width: 601px) and (max-width:1024px) {
+    .logo{
+        font-size: 3.8vw;
+    }
+    nav li a{
+        font-size: 2.5vw;
+    }
+}
+
+/*Media query para pantallas pequeñas*/
+@media (max-width: 600px) {
+    header{
+        /*Para que el titulo quede arriba de los links del menú*/
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .logo{
+        font-size: 3.8vw;
+    }
+    nav li a{
+        font-size: 4vw;
+    }
+    .container{
+        order: -1;
+    }
+}
